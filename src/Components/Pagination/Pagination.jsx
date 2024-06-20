@@ -9,9 +9,27 @@ export default function Pagination({ page, pageClick }) {
     pageValues.push(i);
   }
 
+  function handlePreviousClick(v) {
+    if (v === "Previous") {
+      if (page > 1) {
+        pageClick(page - 1);
+      }
+    }
+  }
+
+  function handleNextClick(v) {
+    if (v === "Next") {
+      pageClick(page + 1);
+    }
+  }
+
   return (
     <div className={styles.pagination}>
-      <PaginationBox value="Previous" />
+      <PaginationBox
+        value="Previous"
+        pageClick={handlePreviousClick}
+        disabled={page === 1}
+      />
       {pageValues?.map((value) => {
         return (
           <PaginationBox
@@ -22,7 +40,7 @@ export default function Pagination({ page, pageClick }) {
           />
         );
       })}
-      <PaginationBox value="Next" />
+      <PaginationBox value="Next" pageClick={handleNextClick} />
     </div>
   );
 }

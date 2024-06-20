@@ -1,14 +1,20 @@
 import styles from "./pagination-box.module.css";
 
-export default function PaginationBox({ value, isActivePage, pageClick }) {
+export default function PaginationBox({
+  value,
+  isActivePage,
+  pageClick,
+  disabled = false,
+}) {
   return (
-    <div
+    <button
       className={`${styles["pagination-box"]} ${
         isActivePage ? styles["active-page"] : ""
       }`}
       onClick={() => pageClick(value)}
+      disabled={disabled}
     >
       {value}
-    </div>
+    </button>
   );
 }

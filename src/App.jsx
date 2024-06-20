@@ -22,6 +22,7 @@ export default function App() {
     UserService.getUserList(page, false)
       .then((responseData) => {
         console.log("responseData", responseData);
+        setUserList(responseData?.users);
         setLoading(false);
       })
       .catch((error) => {
