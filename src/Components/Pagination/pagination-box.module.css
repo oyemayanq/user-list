@@ -1,6 +1,6 @@
 .pagination-box {
-  padding: 6px;
-  border: 1px solid #4c23ff;
+  padding: 8px 12px;
+  border: 1px solid grey;
   min-width: 48px;
   min-height: 48px;
   display: flex;
@@ -8,9 +8,11 @@
   align-items: center;
   background-color: #fff;
   cursor: pointer;
+  color: grey;
 }
 
 .active-page {
   background-color: #4c23ff;
   color: #fff;
+  border-color: #4c23ff;
 }
