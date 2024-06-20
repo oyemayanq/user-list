@@ -1,0 +1,12 @@
+.main {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 24px 0px;
+}
+
+.pagination-container {
+  margin-top: 24px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

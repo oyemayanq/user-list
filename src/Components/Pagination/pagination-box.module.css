@@ -1,0 +1,14 @@
+.pagination-box {
+  padding: 6px;
+  border: 1px solid #4c23ff;
+  min-width: 48px;
+  min-height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.active-page {
+  background-color: #4c23ff;
+  color: #fff;
+}

@@ -1,7 +1,7 @@
 import { UserListMockData } from "./UserListMock";
 
 export default class UserService {
-  static getUserList(page, useMock = false) {
+  static async getUserList(page, useMock = false) {
     if (useMock) {
       return new Promise((resolve) => {
         setTimeout(() => {
@@ -12,6 +12,8 @@ export default class UserService {
 
     const url = `https://give-me-users-forever.vercel.app/api/users/${page}/next`;
 
-    return fetch(url);
+    const response = await fetch(url);
+
+    return response.json();
   }
 }
