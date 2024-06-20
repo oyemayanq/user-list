@@ -11,8 +11,23 @@
   color: grey;
 }
 
+.pagination-box:hover {
+  border-color: #4c23ff;
+  color: #4c23ff;
+}
+
 .active-page {
   background-color: #4c23ff;
   color: #fff;
   border-color: #4c23ff;
+}
+
+.active-page:hover {
+  color: #fff;
+}
+
+.pagination-box:disabled:hover {
+  border-color: grey;
+  color: grey;
+  cursor: not-allowed;
 }
